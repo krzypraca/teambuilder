@@ -39,7 +39,7 @@ public class PathProcessor implements PathProcessorIface {
 			nodes.addNode( i );
 		}
 
-		// populate each node with in and out data
+		// for each path populate each node with in and out data
 		for( int i=0; i<paths.length; i++ ) {			
 			processPath( paths.length, i, paths[i], nodes ) ;
 		}
@@ -47,6 +47,13 @@ public class PathProcessor implements PathProcessorIface {
 		return nodes;
 	}
 	
+	/**
+	 * Process one path
+	 * @param expectedNodeCount
+	 * @param pathIndex
+	 * @param path
+	 * @param nodes
+	 */
 	void processPath( final int expectedNodeCount,  final int pathIndex, final String path, final Nodes nodes ) {
 		logger.debug( String.format( "Processing path: %s", path) );
 		
@@ -62,7 +69,7 @@ public class PathProcessor implements PathProcessorIface {
 		
 		final Node currentNode = nodes.getNode( pathIndex ) ;
 		
-		// analyze each path and populate nodes
+		// analyze each path and populate in and out nodes
 		for ( int i=0; i< path.length(); i++ ) {
 			char character = path.charAt(i) ;
 			

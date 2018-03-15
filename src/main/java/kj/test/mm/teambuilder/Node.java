@@ -13,8 +13,8 @@ public class Node {
 	private Map<Integer, Node> inNodeMap = new HashMap<Integer,Node>() ;
 	private Map<Integer, Node> outNodeMap = new HashMap<Integer,Node>() ;
 	
-	public Node( final Integer name ) {
-		this.name = name ;
+	public Node( final int name ) {
+		this.name = Integer.valueOf( name ) ;
 	}
 	
 	public void addInNode( final Node node ) {

@@ -36,7 +36,7 @@ public class TeambuilderApplication implements ApplicationRunner {
 			System.out.println( "*                                                                    ");
 			System.out.println( "**********************************************************************");
 			
-		} catch( Exception e ) {
+		} catch( Throwable e ) {
 			logger.error( e.toString() ) ;
 			// I will also print it like this to be visible
 			System.out.println( "**********************************************************************");

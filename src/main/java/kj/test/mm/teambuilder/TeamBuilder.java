@@ -14,13 +14,13 @@ public class TeamBuilder {
 	PathProcessorIface processor = new PathProcessor() ;
 	
 	/**
-	 * 
+	 * Find out the counts of special locations
 	 * @param paths array of Strings, each String contains 0 and 1, were 1 indicate a presence of output path
 	 * @return int[] [0] number of locations that can reache all other locations, [1] number of locations that can be reached from all other locations
 	 */
 	public final int[] specialLocations( final String[] paths ) {
 
-		// create nodeMap
+		// create Nodes
 		Nodes nodes = processor.processPaths( paths ) ;
 		
 		// expand
